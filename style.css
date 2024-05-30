@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center center;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-main-background: hsl(233, 47%, 7%);
+  --color-card-background: hsl(244, 38%, 16%);
+  --color-accent: hsl(277, 64%, 61%);
+  --color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-main-background);
+  color: white;
+  text-align: center;
+}
+
+picture {
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+.content-right {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.content-right {
+  background-color: var(--color-accent);
+}
+
+main {
+  background-color: var(--color-card-background);
+  width: 20rem;
+
+  border-radius: 0.5rem;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-left {
+  display: grid;
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+p {
+  color: var(--color-main-paragraph);
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+}
+
+h1 span {
+  color: var(--color-accent);
+}
+
+.stats {
+  display: grid;
+  gap: 1rem;
+  padding: 0 5rem 0 5rem;
+}
+
+.stats p {
+  line-height: 1.5rem;
+
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.stats p span {
+  color: var(--color-stat-headings);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 650px) {
+  main {
+    width: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    text-align: left;
+  }
+
+  .content-left {
+    width: 50%;
+    padding: 4rem;
+  }
+
+  .content-right {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .stats {
+    display: flex;
+    gap: 1rem;
+    padding: 0 5rem 0 0rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
